@@ -1,0 +1,12 @@
+{
+    "manifest_version": 2,
+    "name": "Add link to sci.vanyog.com",
+    "version": "1.0",
+
+    "browser_action": {
+      "default_popup": "popup.html",
+      "default_icon": "icon-links.png"
+    },
+
+    "permissions": ["tabs", "storage"]
+}

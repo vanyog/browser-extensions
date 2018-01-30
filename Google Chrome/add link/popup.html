@@ -1,0 +1,27 @@
+<html>
+    <head>
+    <script src="script.js"></script>
+    <style>
+        a:focus { outline:none; }
+    </style>
+    </head>
+    <body>
+        <p id="scl">
+            <a href="http://sci/index.php?lid=cat&pid=6#outer_links" style="white-space:nowrap;">
+            Link group
+            </a>
+        </p>
+        <p id="message" style="width:250px;"></p>
+        <form name="add_link_form" method="POST" target="_blank">
+            <input type="hidden" name="action" value="update">
+            <p>URL: <input type="text" name="link" size="50">
+            Place: <input type="text" name="place" size="5">
+            Group: <input type="text" name="up" size="5" value="1526" onfocus="this.select();">
+            Private: <input type="text" name="private" size="1"></p>
+            <p>Title: <input type="text" name="title" size="100" onfocus="enter_title_field();"></p>
+            <p>Comment: <textarea name="comment" cols="83" rows="4" style="vertical-align:top"></textarea></p>
+            <input type="submit" value="Add link">
+        </form>
+        </form>
+    </body>
+</html>
