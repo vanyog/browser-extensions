@@ -22,11 +22,14 @@ document.addEventListener(
                     {active:true, currentWindow:true},
                     (tabs) => {
                         var url = tabs[0].url;
-                        var us = url.substring(0,21);
-                        if( (us!="http://sci.vanyog.com") && (us!="http://sci/index.php?") ){
+                        var us = url.substring(0,22);
+                        if( (us!="https://sci.vanyog.com") && (us!="http://sci/index.php?l") ){
                             var t = tabs[0].title;
                             chrome.storage.sync.get("scips", function (p) {
-                                if( (p["scips"].pid!="6") || (p["scips"].lid=="undefined") )
+                                if( typeof(p["scips"])=="undefined" || 
+                                    (p["scips"].pid!="6") || 
+                                    (p["scips"].lid=="undefined") 
+                                   )
                                 {
                                     document.getElementById("message").innerText = "Click the link and navigate to the link group you want to add new links in "
                                                                                  + "than click this button again. " + JSON.stringify(p["scips"].pid);
